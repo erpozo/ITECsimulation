@@ -20,6 +20,21 @@ class teacher{
         return new teacher($teacherName, $borndate, $id);
     }
 
+
+    /**
+     * Crea un profesor sin necesidad de crear antes un objeto fecha
+     * si no que se crea al mismo tiempo
+     * @param string $teacherName
+     * Nombre del profesor
+     * @param int $day
+     * Dia de su fecha de nacimiento
+     * @param int $month
+     * Mes de su fecha de nacimiento
+     * @param int $year
+     * Año de su fecha de nacimiento
+     * @param int $id
+     * ID del profesor
+     */
     public static function createTeacherDate(string $teacherName, int $day, int $month, int $year, int $id){
         $date = date::createDate($day,$month,$year);
         return self::create($teacherName, $date, $id);
