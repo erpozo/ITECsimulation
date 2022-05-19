@@ -9,11 +9,11 @@ class time{
     private DateTime $DateTimeObj;
 
     public function __construct(int $hour, int $minute, int $second){
-        $this->$DateTimeObj = new \DateTime();
-        $this->$DateTimeObj->setTime($hour,$minute,$second);
-        $this->$hour=$hour;
-        $this->$minute=$minute;
-        $this->$second=$second;
+        $this->DateTimeObj = new \DateTime();
+        $this->DateTimeObj->setTime($hour,$minute,$second);
+        $this->hour=$hour;
+        $this->minute=$minute;
+        $this->second=$second;
     }
 
     public static function createTime(int $hour, int $minute, int $second){

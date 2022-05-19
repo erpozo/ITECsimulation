@@ -9,15 +9,15 @@ class course{
     private static $IDcount=0;
 
     public function __construct(string $name){
-        $this->$ID = ++self::$IDcount;
-        $this->$name = $name;
+        $this->ID = ++self::$IDcount;
+        $this->name = $name;
     }
 
     public function getID(){
-        return $this->$ID;
+        return $this->ID;
     }
 
     public function getName(){
-        return $this->$name;
+        return $this->name;
     }
 }

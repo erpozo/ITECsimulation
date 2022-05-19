@@ -9,11 +9,11 @@ class date{
     private DateTime $DateTimeObj;
 
     public function __construct(int $day, int $month, int $year){
-        $this->$DateTimeObj = new \DateTime();
-        $this->$DateTimeObj->setDate($year,$month,$day);
-        $this->$day=$day;
-        $this->$month=$month;
-        $this->$year=$year;
+        $this->DateTimeObj = new \DateTime();
+        $this->DateTimeObj->setDate($year,$month,$day);
+        $this->day=$day;
+        $this->month=$month;
+        $this->year=$year;
     }
 
     public static function createDate(int $day, int $month, int $year){

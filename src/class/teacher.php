@@ -11,9 +11,9 @@ class teacher{
     private static $IDcount=0;
 
     public function __construct(string $teacherName, date $borndate, int $id){
-        $this->$id = $id;
-        $this->$teacherName = $teacherName;
-        $this->$borndate = $borndate;
+        $this->id = $id;
+        $this->teacherName = $teacherName;
+        $this->borndate = $borndate;
     }
 
     public static function create(string $teacherName, date $borndate, int $id){
@@ -36,23 +36,22 @@ class teacher{
      * ID del profesor
      */
     public static function createTeacherDate(string $teacherName, int $day, int $month, int $year, int $id){
-        $date = date::createDate($day,$month,$year);
-        return self::create($teacherName, $date, $id);
+        return self::create($teacherName, date::createDate($day,$month,$year), $id);
     }
 
     public function getName():string{
-        return $this->$name;
+        return $this->name;
     }
 
     public function getBornDate():date{
-        return $this->$borndate;
+        return $this->borndate;
     }
 
     public function getBornDateStr(){
-        return $this->$borndate->getDateStr();
+        return $this->borndate->getDateStr();
     }
 
     public function getId():int{
-        return $this->$id;
+        return $this->id;
     }
 }

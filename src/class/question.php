@@ -10,9 +10,9 @@ class question{
     private static $IDcount=0;
 
     public function __construct(string $description,int $maxScore){
-        $this->$ID = ++self::$IDcount;
-        $this->$description = $description;
-        $this->$maxScore = $maxScore;
+        $this->ID = ++self::$IDcount;
+        $this->description = $description;
+        $this->maxScore = $maxScore;
     }
 
     public static function createQuestion(string $description,int $maxScore){
@@ -20,14 +20,14 @@ class question{
     }
 
     public function getMaxScore():int{
-        return $this->$maxScore;
+        return $this->maxScore;
     }
 
     public function getDescription():string{
-        return $this->$description;
+        return $this->description;
     }
 
     public function getId():int{
-        return $this->$ID;
+        return $this->ID;
     }
 }

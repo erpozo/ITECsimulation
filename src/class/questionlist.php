@@ -12,20 +12,20 @@ class questionlist{
     public function __construct(array $questionlist){
         $chekQuestion = [];
         for($n=0;$n<count($questionlist);++$n){
-            if(validateQuestion($questionlist[$n])){
-                $this->$list[]=[$questionlist[$n]->get];
+            if(self::validateQuestion($questionlist[$n])){
+                $this->list[]=[$questionlist[$n]->get];
             };
         }
-        $this->$ID = ++self::$IDcount;
-        $this->$list = $chekQuestion;
+        $this->ID = ++self::$IDcount;
+        $this->list = $chekQuestion;
     }
 
-    private function validateQuestion($question):bool{
+    private static function validateQuestion($question):bool{
         return is_a($question, "question");
     }
 
     public function addQuestion($question){
-        if(validateQuestion($question)){
+        if(self::validateQuestion($question)){
             array_push($this->list,$question);
         }
     }
