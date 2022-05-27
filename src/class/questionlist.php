@@ -20,7 +20,7 @@ class questionlist{
         $this->list = $chekQuestion;
     }
 
-    private static function validateQuestion($question):bool{
+    private static function validateQuestion(question $question):bool{
         return is_a($question, "question");
     }
 
@@ -30,8 +30,8 @@ class questionlist{
         }
     }
 
-    public function addNewQuestion(){
-
+    public function addNewQuestion(string $description,int $maxScore){
+        $this->addQuestion(question::createQuestion($description, $maxScore));
     }
 
     public function getTotalScore(){
