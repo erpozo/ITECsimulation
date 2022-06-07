@@ -39,6 +39,8 @@ curso
 profesor
     profesor_ID
     Nombre
+    Apellido1
+    Apellido2
     DNI
 
 alumnoCliclo

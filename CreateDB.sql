@@ -5,13 +5,15 @@ create table alumnos (
     DNI CHAR(9) NOT NULL UNIQUE
     Nombre varchat(20),
     Apellido1 varchat(20),
-    Apellido2 varchat(20),
+    Apellido2 varchat(20)
 );
 
 create table profesor (
 	profesor_ID INT AUTO_INCREMENT PRIMARY KEY,
     DNI CHAR(9) NOT NULL UNIQUE
-    Nombre varchat(20)
+    Nombre varchat(20),
+    Apellido1 varchat(20),
+    Apellido2 varchat(20)
 );
 
 create table asignatura (
